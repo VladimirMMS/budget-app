@@ -5,23 +5,16 @@ import { Budget } from 'src/app/models/budget';
 @Component({
   selector: 'app-income',
   templateUrl: './income.component.html',
-  styleUrls: ['./income.component.css']
+  styleUrls: ['./income.component.css'],
 })
-export class IncomeComponent implements OnInit{
-  incoming: Budget[] = []
-  constructor(public budgetService: BudgetService) {
-
-  }
+export class IncomeComponent implements OnInit {
+  incoming: Budget[] = [];
+  constructor(public budgetService: BudgetService) {}
   ngOnInit(): void {
-    this.incoming = this.budgetService.incoming
-   
+    this.incoming = this.budgetService.incoming;
   }
   emitRemove(index) {
-    this.budgetService.removeIncoming(index, this.incoming)
-    this.budgetService.removeEvent.emit(this.incoming)
-
+    this.budgetService.removeIncoming(index, this.incoming);
+    this.budgetService.removeEvent.emit(this.incoming);
   }
-
-  
-
 }

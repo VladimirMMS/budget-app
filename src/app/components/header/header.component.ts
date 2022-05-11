@@ -23,6 +23,6 @@ export class HeaderComponent implements OnInit {
     this.incomingSum = this.budgetService.setIcoming();
     this.expenseSum = this.budgetService.setExpense();
     this.currentBudget = this.budgetService.getCurrentBudget();
-    this.expensePercent = this.budgetService.getPercent()
+    this.expensePercent = this.budgetService.getPercent();
   }
 }
