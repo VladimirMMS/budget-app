@@ -1,0 +1,29 @@
+<div class="cabecero">
+  <div class="presupuesto">
+    <div class="presupuesto_titulo">Presupuesto Disponible:</div>
+
+    <div class="presupuesto_valor">
+      {{ currentBudget | currency: "BMD":"$":"1.2-2" }}
+    </div>
+
+    <div class="presupuesto_ingreso limpiarEstilos">
+      <div class="presupuesto_ingreso--texto">Ingresos</div>
+      <div class="right">
+        <div class="presupuesto_ingreso--valor">
+          {{ incomingSum | currency: "BMD":"$":"1.2-2" }}
+        </div>
+        <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+      </div>
+    </div>
+
+    <div class="presupuesto_egreso limpiarEstilos">
+      <div class="presupuesto_egreso--text">Egresos</div>
+      <div class="right limpiarEstilos">
+        <div class="presupuesto_egreso--valor">
+          -{{ expenseSum | currency: "BMD":"$":"1.2-2" }}
+        </div>
+        <div class="presupuesto_egreso--porcentaje">{{ expensePercent }}%</div>
+      </div>
+    </div>
+  </div>
+</div>
